@@ -1,0 +1,58 @@
+@import url(style.css);
+
+.match{
+     width: 80%;
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+}
+
+.match-info {
+     width: 90%;
+     height: 242px;
+     border: 1px solid #E8E8E8;
+     border-radius: 10px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin: 10px;
+}
+.match-info .teams{
+     display: flex;
+     justify-content: space-between;
+}
+.match-info .teams img{
+     width: 50%;
+     margin: 0 5px;
+}
+.match-info .teams p{
+     font-size: 16px;
+     color: #161616;
+     
+}
+
+.match-info h3,p{
+     text-align: center;
+     margin: 10px 0;
+}
+
+.match-info p{
+     color: #4D4D4D;
+}
+
+@media (max-width: 992px) {
+     .match{
+          width: 100%;
+          grid-template-columns: repeat(2, 1fr);
+          align-content: center;
+          justify-items: center;
+     }
+}
+@media (max-width: 588px) {
+     .match{
+          /* width: 100%; */
+          grid-template-columns: repeat(1, 1fr);
+          /* align-content: center;
+          justify-items: center; */
+     }
+}
