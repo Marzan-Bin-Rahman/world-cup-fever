@@ -16,13 +16,15 @@ font-family: 'Poppins', sans-serif;
      scroll-behavior: smooth;
 }
 
-h1 {
+h1,
+span {
      font-family: 'Oswald', sans-serif;
 }
 
 h3,
 p,
-button {
+button,
+a {
      font-family: 'Poppins', sans-serif;
 }
 
@@ -383,6 +385,9 @@ footer .icons i{
 		opacity: 1;
 	}
 }
+
+
+/* custom scroll bar */
 
 
 body::-webkit-scrollbar-track
