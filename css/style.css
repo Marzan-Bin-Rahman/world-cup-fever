@@ -13,6 +13,7 @@ font-family: 'Poppins', sans-serif;
      padding: 0;
      box-sizing: border-box;
      overflow-x: hidden;
+     scroll-behavior: smooth;
 }
 
 h1 {
@@ -28,6 +29,11 @@ button {
 button {
      cursor: pointer;
      font-weight: 500;
+     text-decoration: none;
+}
+a{
+     text-decoration: none;
+     color: #ffffff;
 }
 
 /* styling the header */
@@ -90,7 +96,101 @@ button {
      height: 100%;
 }
 
+/* news styling */
 
+
+#news {
+     margin: 60px;
+     display: flex;
+}
+
+#news .controls {
+     width: 312px;
+     height: 312px;
+     background-color: #161616;
+     border-radius: 10px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+}
+
+#news .controls .control {
+     width: 80%;
+     height: 64px;
+     background-color: #ffffff;
+     border-radius: 10px;
+     margin: 15px;
+     border: none;
+     font-size: 20px;
+}
+
+.view-all {
+     display: none;
+     width: 131px;
+     height: 47px;
+     background-color: #DD0000;
+     border-radius: 5px;
+     border: none;
+     color: #ffffff;
+     margin: 20px auto;
+}
+
+#news .controls #blog-btn {
+     background-color: #DD0000;
+     color: #ffffff;
+
+}
+
+.blogs {
+     width: 80%;
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+
+}
+
+.blogs .blog {
+     width: 80%;
+     height: 362px;
+     height: fit-content;
+     border: 1px solid rgb(236, 227, 227);
+     border-radius: 10px;
+     margin: 20px;
+}
+
+.blogs .blog .blog-img img {
+     width: 100%;
+}
+
+.blogs .blog .blog-description button {
+     border: 1px solid #161616;
+     background-color: #ffffff;
+     color: #161616;
+     font-size: 16px;
+     padding: 4px 15px;
+     border-radius: 5px;
+     margin: 20px;
+}
+
+.blogs .blog .blog-description h3 {
+     font-size: 18px;
+     margin: 0 10px;
+}
+
+.blogs .blog .blog-description .statistics {
+     display: flex;
+     justify-content: space-evenly;
+     margin: 10px 0;
+
+}
+
+.blogs .blog .blog-description .statistics .time,
+.comment {
+     display: flex;
+     justify-content: space-evenly;
+     margin: 10px;
+
+}
 
 
 
@@ -106,7 +206,7 @@ button {
 
 @media (max-width: 992px) {
 
-     /* tablet */
+     /* header section*/
 
      #header {
           margin: 50px;
@@ -125,12 +225,12 @@ button {
           margin-top: 10px;
      }
 
-     #header .text-container button {
+     #header .text-container a {
           padding: 12px;
           margin: 20px 0;
      }
 
-     #header .text-container button i {
+     #header .text-container a i {
           margin-left: 12px;
      }
 
@@ -139,7 +239,41 @@ button {
           height: 340px;
      }
 
+     /* news section */
 
+     #news {
+          flex-direction: column;
+     }
+
+     #news .controls {
+          flex-direction: row;
+          width: 100%;
+          height: fit-content;
+          background-color: #ffffff;
+     }
+
+     #news .controls .control {
+          border: 1px solid #E8E8E8;
+          width: 100%;
+     }
+
+     #news .controls #blog-btn {
+          border: none;
+     }
+
+     .blogs {
+          width: 100%;
+          grid-template-columns: repeat(2, 1fr);
+
+     }
+
+     .blogs .blog {
+          width: 90%;
+     }
+
+     .view-all {
+          display: block;
+     }
 }
 
 /* phone zone */
@@ -147,7 +281,7 @@ button {
 @media (max-width: 588px) {
 
      /* header */
-     
+
      #header {
           flex-direction: column;
           justify-content: center;
@@ -164,7 +298,7 @@ button {
           margin-top: 8px;
      }
 
-     #header .text-container button {
+     #header .text-container a {
           padding: 8px 12px;
           font-size: 10px;
      }
@@ -174,4 +308,23 @@ button {
           height: 245px;
      }
 
+     /* news section */
+
+     #news .controls {
+          flex-direction: column;
+          width: 100%;
+          height: fit-content;
+          background-color: #ffffff;
+     }
+
+     .blogs {
+          /* width: 100%; */
+          grid-template-columns: repeat(1, 1fr);
+
+     }
+
+     .blogs .blog {
+          width: 100%;
+          margin: 20px 0;
+     }
 }
